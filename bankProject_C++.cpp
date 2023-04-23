@@ -1,20 +1,103 @@
-﻿// bankProject_C++.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
+﻿#include <iostream>
+#include <string>
+#include <vector>
 
-#include <iostream>
+using namespace std;
+
+class Account
+{
+    int number;
+    double balance;
+
+    void enroll(double sum)
+    {
+
+    };
+
+    void withdraw(double sum)
+    {
+
+    };
+
+    double Info()
+    {
+        return balance;
+    }
+};
+
+class Client
+{
+    int id;
+    string name;
+    string surname;
+
+    vector<Account> accounts;
+
+    Client(string n)
+    {
+        Initial(n);
+    }
+
+    void Initial(string n)
+    {
+
+    }
+
+    void Transfer(int num, double sum)
+    {
+
+    }
+
+    void Refill(int num, double sum)
+    {
+
+    }
+
+    void Info()
+    {
+
+    }
+};
+
+class Bank
+{
+    vector<Client> clients;
+
+    Bank()
+    {
+        Load();
+    }
+
+    void Load()
+    {
+
+    }
+
+    void AddClient(string name)
+    {
+
+    };
+
+    void DelClient(int id)
+    {
+
+    };
+
+    void ClientInfo(int id)
+    {
+        
+    }
+
+    int Find(string name)
+    {
+        int id;
+
+        return id;
+    }
+};
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    Bank bank = new Bank();
+    
 }
-
-// Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
-// Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
-
-// Советы по началу работы 
-//   1. В окне обозревателя решений можно добавлять файлы и управлять ими.
-//   2. В окне Team Explorer можно подключиться к системе управления версиями.
-//   3. В окне "Выходные данные" можно просматривать выходные данные сборки и другие сообщения.
-//   4. В окне "Список ошибок" можно просматривать ошибки.
-//   5. Последовательно выберите пункты меню "Проект" > "Добавить новый элемент", чтобы создать файлы кода, или "Проект" > "Добавить существующий элемент", чтобы добавить в проект существующие файлы кода.
-//   6. Чтобы снова открыть этот проект позже, выберите пункты меню "Файл" > "Открыть" > "Проект" и выберите SLN-файл.
