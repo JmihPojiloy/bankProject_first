@@ -5,7 +5,10 @@
 // свойство creditLimit не наследовалось
 
 CreditAcc::CreditAcc(double balance, double creditLimit)
-	: Account(balance), creditLimit(creditLimit){}
+	: Account(balance), creditLimit(creditLimit)
+{
+	name = 'C';
+}
 
 void CreditAcc::deposit(double amount)
 {

@@ -3,7 +3,10 @@
 
 // реализация наследуемого конструктора
 
-SimpleAcc::SimpleAcc(double balance) : Account (balance){}
+SimpleAcc::SimpleAcc(double balance) : Account (balance)
+{
+	name = 'S';
+}
 
 void SimpleAcc::deposit(double amount)
 {

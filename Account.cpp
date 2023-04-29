@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Account.h"
 
-Account::Account(double balance) : balance(balance){}
+Account::Account(double balance) : balance(balance) {}
 
 void Account::deposit(double amount)
 {
@@ -13,7 +13,12 @@ void Account::withdraw(double amount)
 	balance -= amount;
 }
 
-void Account::getBalance() const
+double Account::getBalance() const
 {
-	std::cout << "Balance: " << this->balance << std::endl;
+	return this->balance;
+}
+
+char Account::getName() const
+{
+	return this->name;
 }

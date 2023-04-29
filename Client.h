@@ -3,24 +3,31 @@
 #define CLIENT_H
 
 #include <string>
-#include<vector>
+#include <vector>
 #include "Account.h"
 
-using namespace std;
+/*
+    класс "клиент" имеет конструктор где при создании задается 
+    имя и баланс счета, функция определения, имени создания счетов, перевода денег
+    (снятие или пополнение) и информации об имени, количестве счетов и балансе
+*/
 
-class Client {
+class Client 
+{
 public:
-    Client(const std::string& n);
-    virtual void Initial(const std::string& n) = 0;
-    virtual void Transfer(int num, double sum) = 0;
-    virtual void Refill(int num, double sum) = 0;
+    Client(const std::string& n, double balance);
+
+    virtual void Transfer(char type, double sum, int operation) = 0;
     virtual void Info() = 0;
 
 private:
     int id;
-    string name;
-    string surname;
-    vector<Account> accounts;
+    std::string name;
+    std::string surname;
+    std::vector<Account> accounts;
+
+    void Initial(const std::string& n, double b);
+    //Account getAcc(char type);
 };
 
 #endif
