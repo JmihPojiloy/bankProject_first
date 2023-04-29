@@ -13,7 +13,7 @@ void Account::withdraw(double amount)
 	balance -= amount;
 }
 
-void Account::display() const
+void Account::getBalance() const
 {
 	std::cout << "Balance: " << this->balance << std::endl;
 }
