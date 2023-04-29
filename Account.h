@@ -1,17 +1,18 @@
 #pragma once
 #ifndef ACCOUNT_H
-#define ACCOUNT_H
+#define ACOUNT_H
 
-class Account {
+class Account
+{
 public:
-    virtual int get_number() const = 0;
-    virtual double get_balance() const = 0;
-    virtual void deposit(double amount) = 0;
-    virtual void withdraw(double amount) = 0;
-    virtual void transfer(Account& to, double amount) = 0;
-private:
-    int number;
-    double balance;
-};
+	Account(double balane);
+	virtual ~Account() = default;
 
+	virtual void deposit(double amount);
+	virtual void withdraw(double amount);
+	virtual void display() const;
+
+protected:
+	double balance;
+};
 #endif

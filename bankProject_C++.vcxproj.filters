@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Исходные файлы\Accounts">
+      <UniqueIdentifier>{b997e488-6568-4239-b575-e063b6adfa4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Accounts">
+      <UniqueIdentifier>{68da1f31-b09c-43ec-85f4-494a2b92e8a1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -21,22 +27,34 @@
     <ClCompile Include="Bank.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Account.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="Client.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Account.cpp">
+      <Filter>Исходные файлы\Accounts</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleAcc.cpp">
+      <Filter>Исходные файлы\Accounts</Filter>
+    </ClCompile>
+    <ClCompile Include="CreditAcc.cpp">
+      <Filter>Исходные файлы\Accounts</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Account.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="Bank.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Client.h">
       <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Account.h">
+      <Filter>Файлы заголовков\Accounts</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleAcc.h">
+      <Filter>Файлы заголовков\Accounts</Filter>
+    </ClInclude>
+    <ClInclude Include="CreditAcc.h">
+      <Filter>Файлы заголовков\Accounts</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
