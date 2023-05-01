@@ -10,14 +10,15 @@ using namespace std;
 class Bank
 {
 public:
-    Bank();
-    virtual void AddClient(Client client) = 0;
-    virtual void DelClient(int id) = 0;
-    virtual void ClientInfo(int id) = 0;
-    virtual int Find(string name) const = 0;
+    Bank(int numberOfClients);
+    void AddClient(std::string name, double deposit);
+    void DelClient(int id);
+    void ClientInfo(int id);
+    void ClientList();
+    int Find(const std::string& name);
 private:
-    vector<Client> clients;
-    virtual void Load() = 0;
+    std::vector<Client> clients;
+    void Load(int numberOfClients);
 };
 
 #endif

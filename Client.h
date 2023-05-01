@@ -17,8 +17,12 @@ class Client
 public:
     Client(const std::string& n, double balance);
 
-    virtual void Transfer(char type, double sum, int operation) = 0;
-    virtual void Info() = 0;
+    void SetId(int num);
+    int GetId();
+    std::string GetName();
+    std::string GetSurname();
+    void Transfer(char type, double sum, int operation);
+    void Info();
 
 private:
     int id;

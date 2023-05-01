@@ -41,6 +41,26 @@ using namespace std;
 	}
 	*/
 
+	void Client::SetId(int n)
+	{
+		this->id = n;
+	}
+
+	int Client::GetId()
+	{
+		return this->id;
+	}
+
+	std::string Client::GetName()
+	{
+		return this->name;
+	}
+
+	std::string Client::GetSurname()
+	{
+		return this->surname;
+	}
+
 	void Client::Info()
 	{
 		std::cout << this->name << " " << this->surname << endl;
