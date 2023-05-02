@@ -56,5 +56,8 @@
     <ClInclude Include="CreditAcc.h">
       <Filter>Файлы заголовков\Accounts</Filter>
     </ClInclude>
+    <ClInclude Include="IInfo.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

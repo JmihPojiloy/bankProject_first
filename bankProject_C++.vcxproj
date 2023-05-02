@@ -139,6 +139,7 @@
     <ClInclude Include="Bank.h" />
     <ClInclude Include="Client.h" />
     <ClInclude Include="CreditAcc.h" />
+    <ClInclude Include="IInfo.h" />
     <ClInclude Include="SimpleAcc.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

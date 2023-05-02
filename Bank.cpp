@@ -8,6 +8,7 @@ Bank::Bank(int numberOfClients)
 	Load(numberOfClients);
 }
 
+// функция подготовки, которая подгружает тестоввую коллекцию
 void Bank::Load(int n)
 {
 	for (size_t i = 0; i <n;i++)
@@ -65,6 +66,22 @@ void Bank::DelClient(int id)
     }
 }
 
+void Bank::Transaction(int id, char acc, double sum, int operation)
+{
+    for (auto client : this->clients)
+    {
+        if (client.GetId() == id)
+        {
+            client.Transfer(acc, sum, operation);
+        }
+    }
+}
+
+void Bank::Transfer(int id1, int id2, double sum)
+{
+
+}
+
 void Bank::ClientInfo(int id)
 {
     for (auto client : this->clients)
@@ -74,6 +91,7 @@ void Bank::ClientInfo(int id)
     }
 }
 
+// функция интерфейса IInfo
 void Bank::ClientList()
 {
     for (auto client : this->clients)

@@ -3,18 +3,26 @@
 #define BANK_H
 
 #include <vector>
+#include "IInfo.h"
 #include "Client.h"
 
 using namespace std;
 
-class Bank
+/*
+    Класс Банк реализует функции добавления клиента, удаления, поиск
+    показ информации о клиенте. Так же наследует интерфейс и реализует 
+    его функцию, которая покзывает список клиентов
+*/
+class Bank : public IInfo
 {
 public:
     Bank(int numberOfClients);
     void AddClient(std::string name, double deposit);
     void DelClient(int id);
+    void Transaction(int id, char acc, double sum, int operation);
+    void Transfer(int id1, int id2, double sum);
     void ClientInfo(int id);
-    void ClientList();
+    void ClientList() override;
     int Find(const std::string& name);
 private:
     std::vector<Client> clients;
