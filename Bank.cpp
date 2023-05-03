@@ -5,26 +5,16 @@
 
 Bank::Bank(int numberOfClients)
 {
+    // подготовка к работе
 	Load(numberOfClients);
 }
 
-// функция подготовки, которая подгружает тестоввую коллекцию
+// функция подготовки, которая подгружает тестовую коллекцию
 void Bank::Load(int n)
 {
-	for (size_t i = 0; i <n;i++)
+	for (int i = 0; i < n; i++)
 	{
-        for (int i = 1; i <= n; ++i) 
-        {
             std::string str = "Name_";
-
-            /*
-            std::string num_str = std::to_string(i);
-            str += num_str;
-            str += " ";
-            std::string str2 = "Surname_";
-            str2 += num_str;
-            std::string combined_str = str + str2;
-            */
 
             str.append(std::to_string(i))
                 .append(" ")
@@ -32,12 +22,12 @@ void Bank::Load(int n)
                 .append(std::to_string(i));
 
             Client client(str, 500.0);
-            client.SetId(this->clients.size() + i);
-            this->clients.push_back(client);
-        }
+            client.SetId(i);
+            this->clients.push_back(client);   
 	}
 }
 
+// функция поиска клиента по строке совпадения с именем или фамилией
 int Bank::Find(const std::string& name)
 {
     for (auto client:this->clients)
@@ -50,13 +40,13 @@ int Bank::Find(const std::string& name)
 void Bank::AddClient(std::string name, double deposit)
 {
     Client client(name, deposit);
-    client.SetId(this->clients.size() + 1);
+    client.SetId(this->clients.size() );
     this->clients.push_back(client);
 }
 
 void Bank::DelClient(int id)
 {
-    for (size_t i = 0; i < this->clients.size(); i++)
+    for (int i = 0; i < this->clients.size(); i++)
     {
         if (this->clients[i].GetId() == id)
         {
@@ -66,20 +56,16 @@ void Bank::DelClient(int id)
     }
 }
 
+// пополнение или снятие денег
 void Bank::Transaction(int id, char acc, double sum, int operation)
 {
-    for (auto client : this->clients)
+    for (auto &client : this->clients)
     {
         if (client.GetId() == id)
         {
             client.Transfer(acc, sum, operation);
         }
     }
-}
-
-void Bank::Transfer(int id1, int id2, double sum)
-{
-
 }
 
 void Bank::ClientInfo(int id)

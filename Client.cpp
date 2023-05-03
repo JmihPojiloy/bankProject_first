@@ -20,7 +20,7 @@ using namespace std;
 	void Client::Initial(const std::string& n, double b)
 	{
 		string separtors = " #.,:;"; // определяем разделтели
-		size_t position = n.find_first_of(separtors); // позиция разделителя
+		int position = n.find_first_of(separtors); // позиция разделителя
 		this->name = n.substr(0, position); // делим строку
 		this->surname = n.substr(position + 1);
 
@@ -63,7 +63,7 @@ using namespace std;
 
 	void Client::Info()
 	{
-		std::cout << this->name << " " << this->surname << endl;
+		std::cout << this->id  << " " << this->name << " " << this->surname << endl;
 		for (int i = 0; i < accounts.size(); i++)
 		{
 			std::cout << "Account type: " << accounts[i].getName() << "\t";

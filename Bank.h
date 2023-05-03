@@ -20,7 +20,6 @@ public:
     void AddClient(std::string name, double deposit);
     void DelClient(int id);
     void Transaction(int id, char acc, double sum, int operation);
-    void Transfer(int id1, int id2, double sum);
     void ClientInfo(int id);
     void ClientList() override;
     int Find(const std::string& name);
