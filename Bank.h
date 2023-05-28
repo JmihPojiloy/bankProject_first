@@ -17,6 +17,7 @@ class Bank : public IInfo
 {
 public:
     Bank(int numberOfClients);
+    ~Bank();
     void AddClient(std::string name, double deposit);
     void DelClient(int id);
     void Transaction(int id, char acc, double sum, int operation);

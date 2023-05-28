@@ -16,7 +16,7 @@ class Client
 {
 public:
     Client(const std::string& n, double balance);
-
+    ~Client();
     void SetId(int num);
     int GetId();
     std::string GetName();

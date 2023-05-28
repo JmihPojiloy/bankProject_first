@@ -9,6 +9,10 @@ Bank::Bank(int numberOfClients)
 	Load(numberOfClients);
 }
 
+Bank::~Bank() {
+    cout << "Bank deleted" << endl;
+}
+
 // функция подготовки, которая подгружает тестовую коллекцию
 void Bank::Load(int n)
 {

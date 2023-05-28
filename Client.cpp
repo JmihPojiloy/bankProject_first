@@ -17,6 +17,10 @@ using namespace std;
 		Client::Initial(n, b);
 	}
 
+	Client::~Client() {
+		cout << "Client " << name << " delete" << endl;
+	}
+
 	void Client::Initial(const std::string& n, double b)
 	{
 		string separtors = " #.,:;"; // определяем разделтели
@@ -29,17 +33,6 @@ using namespace std;
 		this->accounts.push_back(SimpleAcc(b));
 		this->accounts.push_back(CreditAcc(b, 500.0));
 	}
-
-	/*
-	Account Client::getAcc(char type)
-	{
-		for (auto& acc : this->accounts)
-		{
-			if (acc.getName() == type)
-				return acc;
-		}
-	}
-	*/
 
 	void Client::SetId(int n)
 	{

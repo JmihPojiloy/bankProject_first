@@ -1,7 +1,10 @@
 #include <iostream>
 #include "Account.h"
 
-Account::Account(double balance) : balance(balance) {}
+Account::Account(double balance) : balance(balance) {
+
+	name = ' ';
+}
 
 void Account::deposit(double amount)
 {
